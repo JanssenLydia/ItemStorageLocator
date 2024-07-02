@@ -35,5 +35,9 @@ To look up the storage location ID of an item, press the 'Check' button below th
 #### Action 3: Check storage location ID of an item
 To verify a storage location ID during reshelving, enter a storage location ID into the 'Item Location' field. A barcode scanner or keyboard may be used. A message will appear in the message area indicating if the item location matches the storage location ID registered in the item record. If the location code is different from the item's storage location ID, the current storage location ID is provided as part of the output message easily retrieve the correct location of the item.
 
+#### Reset form
+To reset the input form, click the 'Item barcode' input field or push the 'Clear' button at the bottom of the screen.
+*Note: After a failed item lookup, the Cloud App may have trouble to recognize a click on the 'Item barcode' input field, because the field is still in focus. Should this happen, use the 'Clear' button to explicitly trigger a reset of the input form and start a new workflow.*
+
 ### Installation in Alma
 To install the Item Storage Location Cloud App, follow the standard procedure for activating Cloud Apps in your Alma environment. The app does not require additional configuration or settings.
