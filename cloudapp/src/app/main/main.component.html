@@ -1,0 +1,38 @@
+<div>
+  <div class="inputform" style="overflow: auto;">
+    <div class="loading-shade" *ngIf="loading">
+      <mat-spinner diameter="50"></mat-spinner>
+      <br>
+    </div>
+    <form class="itemdata" [formGroup]="itemData">
+      <mat-card *ngIf="itemRec" id="callno">
+        Callnumber: {{itemData.value.callnumber}}
+      </mat-card>
+
+      <mat-form-field class="formfields" id="barcode">
+        <mat-label>Item Barcode</mat-label>
+        <input matInput formControlName="barcode" (keydown.enter)="loadRecord()" (click)="clear()" cdkFocusInitial>
+        <mat-icon matSuffix>document_scanner</mat-icon>
+        <mat-hint></mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="formfields" id="locationcode">
+        <mat-label>Item Location</mat-label>
+        <input matInput formControlName="locationcode">
+        <mat-icon matSuffix>document_scanner</mat-icon>
+        <mat-hint></mat-hint>
+      </mat-form-field>
+    </form>
+
+    <div class="actionControls">
+      <button mat-flat-button color="primary" (click)="check()">CHECK</button>
+      <button mat-flat-button color="primary" (click)="set()">SET</button>
+    </div>
+    <div class="result">
+      <p *ngIf="recResult" [ngClass]="success ? 'success' : 'fail'">{{recResult}}</p>
+    </div>
+    <div class="reset">
+      <button mat-flat-button color="warn" (click)="clear()">CLEAR</button>
+    </div>
+  </div>
+</div>

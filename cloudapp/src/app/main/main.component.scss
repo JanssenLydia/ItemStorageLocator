@@ -1,0 +1,155 @@
+@import './main.component.theme';
+
+@mixin themed-styles($theme, $typography){
+  @include main-component-theme($theme, $typography);
+}
+
+$success-bg: honeydew;
+$success-color:green;
+$fail-bg: mistyrose;
+$fail-color: darkred;
+$warn-bg: beige;
+
+* {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+pre {
+  overflow: auto;
+  max-height: 200px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+pre,
+textarea {
+  font-size: 1em;
+}
+
+.maintitle{
+margin: auto;
+max-width: 1000px;
+}
+
+h1 {
+  width: 95%;
+
+  text-align: center;
+}
+
+// Setup grid inputform
+.inputform {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  margin: auto;
+  align-content: center;  
+}
+
+.itemdata, .actionControls, .result, .reset {
+  grid-column: 1/span 1;
+}
+
+// Setup grid subdivision form
+.itemdata {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 95%;
+  align-content: center;
+  justify-items: center;
+}
+
+#callno {
+  grid-column: 2/span 1;
+  width:fit-content;
+  justify-self: center;  
+  background-color: $success-bg;
+  color: $success-color;
+}
+
+mat-form-field {
+  width: 90%;
+  max-width: 500px;
+}
+
+#barcode, #locationcode {
+  grid-column: 1/span 2;  
+}
+
+// Setup grid controls and result
+.actionControls {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  column-gap: 10px;
+  width:95%;
+  justify-items: center;
+}
+
+.result, .reset {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-content: center;
+  width:95%;
+  justify-items: center;
+}
+
+button {
+  width: 100%;
+  padding-top:20px;
+  padding-bottom:20px;
+  max-width: 300px;
+}
+
+mat-icon {
+  padding-right: 20px;
+}
+
+.success {
+  background-color: $success-bg;
+  color:$success-color;
+  width: fit-content;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.fail {
+  background-color: $fail-bg;
+  color: $fail-color;
+  width:fit-content;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.confirm {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  row-gap: 20px;
+  width: fit-content;
+  height:fit-content;
+  align-content: center;
+  justify-items: center;
+}
+
+.confirm h2, mat-dialog-content, mat-dialog-actions {
+  width: 100%;
+  text-align: center;
+}
+
+.confirm mat-dialog-actions {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  column-gap: 10px;
+  width: 95%;
+  justify-items: center;
+}

@@ -1,0 +1,21 @@
+{
+   "id": "item-location-service",
+   "title": "Item Storage Locator",
+   "subtitle": "Add and verify storage location ID of Alma items",
+   "author": "LJ",
+   "description": "This Cloud App allows adding, changing and verifying storage location IDs for items based on item barcode.",
+   "contentSecurity": {
+      "sandbox": {
+         "popups": true,
+         "modals": true
+      }
+   },
+   "icon": {
+      "type": "font",
+      "value": "fa fa-book"
+   },
+   "fullscreen": {
+      "allow": true,
+      "open": false
+   }
+}

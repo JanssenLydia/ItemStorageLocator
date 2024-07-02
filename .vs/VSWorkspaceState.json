@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "\\cloudapp",
+    "\\cloudapp\\src",
+    "\\cloudapp\\src\\app",
+    "\\cloudapp\\src\\app\\interfaces",
+    "\\cloudapp\\src\\app\\main",
+    "\\cloudapp\\src\\app\\theming",
+    "\\cloudapp\\src\\assets",
+    "\\cloudapp\\src\\i18n"
+  ],
+  "PreviewInSolutionExplorer": false
+}

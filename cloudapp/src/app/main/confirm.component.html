@@ -1,0 +1,11 @@
+<div class="confirm">
+<h2 mat-dialog-title>Confirm location change</h2>
+<mat-dialog-content>
+    <p>This item is already registered on location {{data.currentLocation}}.</p>
+    <p>Are you sure you want to change the item location?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-flat-button color = "secondary" [mat-dialog-close] = "false" cdkFocusInitial>NO</button>
+    <button mat-flat-button color="secondary" [mat-dialog-close] = "true">YES</button>    
+</mat-dialog-actions>
+</div>
